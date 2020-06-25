@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+  <param name="temp2" command="
+    $(find xacro)/xacro '/workspace/catkin_ws/src/version_controlled_packages/rotors_simulator/rotors_description/urdf/mav_with_vi_sensor.gazebo' 
+	enable_logging:=false 
+	enable_ground_truth:=true 
+	enable_mavlink_interface:=false 
+	log_file:=firefly 
+	wait_for_record_bag:=false 
+	mav_name:=firefly 
+	namespace:=firefly"
+  />
+rosrun xacro xacro 
+
+</launch>

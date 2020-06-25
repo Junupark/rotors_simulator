@@ -23,6 +23,9 @@ add_executable(rotors_joy_interface src/joy.cpp)
 add_dependencies(rotors_joy_interface ${catkin_EXPORTED_TARGETS})
 target_link_libraries(rotors_joy_interface ${catkin_LIBRARIES})
 
+#catkin_install_python(PROGRAMS scripts/key_joystick.py
+#			DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
 install(TARGETS rotors_joy_interface
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

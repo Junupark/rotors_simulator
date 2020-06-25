@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
   ros::Duration(delay).sleep();
 
   while (trajectory_pub.getNumSubscribers() == 0 && ros::ok()) {
-    ROS_INFO("There is no subscriber available, trying again in 1 second.");
+    ROS_INFO("[%s]There is no subscriber available, trying again in 1 second.", nh.getNamespace().c_str());
     ros::Duration(1.0).sleep();
   }
 
